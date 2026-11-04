@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="90" viewBox="0 0 1000 90"><defs><filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".35"/></pattern>
-<radialGradient id="vig" cx="50%" cy="50%" r="75%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".7"/></radialGradient></defs>
-<style>text{font-family:'Courier New',Consolas,monospace;fill:#00ff41} .dim{fill:#0a8f2a} .flick{animation:fl 4s infinite} @keyframes fl{0%,100%{opacity:1}92%{opacity:1}93%{opacity:.6}94%{opacity:1}96%{opacity:.8}}
-.sweep{animation:sw 6s linear infinite} @keyframes sw{from{transform:translateY(-40px)}to{transform:translateY(400px)}}</style><rect width="1000" height="90" fill="#000"/>
-<g filter="url(#glow)" class="flick"><text x="500" y="40" font-size="16" text-anchor="middle">[ CONNECTION TERMINATED ] — thanks for visiting, operator</text>
-<text x="500" y="66" font-size="12" text-anchor="middle" class="dim">jatin@matrix:~$ exit <tspan style="animation:fl 1s steps(1) infinite">█</tspan></text></g>
-<rect class="sweep" width="1000" height="20" fill="#00ff41" opacity=".06"/><rect width="1000" height="90" fill="url(#scan)"/></svg>
