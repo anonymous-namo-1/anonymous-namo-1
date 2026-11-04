@@ -5,7 +5,7 @@
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/boot.svg"/><img src="assets/boot-light.svg" width="100%"/></picture></p>
 
 <h2>⌁ ./arsenal</h2>
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,unity,cs,cpp,tailwind,vite,mongodb,postgres,docker,git,linux,vercel&perline=8&theme=dark"/><img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,unity,cs,cpp,tailwind,vite,mongodb,postgres,docker,git,linux,vercel&perline=8&theme=light"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=js%2Cts%2Creact%2Cnodejs%2Cpython%2Cunity%2Ccs%2Ccpp%2Ctailwind%2Cvite%2Cmongodb%2Cpostgres%2Cdocker%2Cgit%2Clinux%2Cvercel&perline=8&theme=dark"/><img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,unity,cs,cpp,tailwind,vite,mongodb,postgres,docker,git,linux,vercel&perline=8&theme=light"/></picture></p>
 
 <h2>⌁ cat /proc/jatin/stats</h2>
 <p align="center">
