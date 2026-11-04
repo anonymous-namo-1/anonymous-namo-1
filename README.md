@@ -20,8 +20,7 @@
 <a href="https://github.com/anonymous-namo-1/neon-fps"><img src="assets/dossier-neon-fps.svg" width="49%"/></a>
 <a href="https://github.com/anonymous-namo-1/Battle-Royale-Core"><img src="assets/dossier-Battle-Royale-Core.svg" width="49%"/></a><br/>
 <a href="https://github.com/anonymous-namo-1/neon-deceit-game"><img src="assets/dossier-neon-deceit-game.svg" width="49%"/></a>
-<a href="https://github.com/anonymous-namo-1/Namaste_tv_stripe"><img src="assets/dossier-Namaste_tv_stripe.svg" width="49%"/></a><br/>
-<a href="https://github.com/anonymous-namo-1/SIH26151-Threat-Intelligence-1"><img src="assets/dossier-SIH26151-Threat-Intelligence-1.svg" width="49%"/></a>
+<a href="https://github.com/anonymous-namo-1/SIH26151-Threat-Intelligence-1"><img src="assets/dossier-SIH26151-Threat-Intelligence-1.svg" width="49%"/></a><br/>
 <a href="https://github.com/anonymous-namo-1/synth-eight"><img src="assets/dossier-synth-eight.svg" width="49%"/></a><br/>
 </p>
 

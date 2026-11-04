@@ -80,7 +80,6 @@ w("languages.svg", crt(490, 240, b, "LANG.BYTES // across all repos"))
 # ---- dossiers
 proj = [("spin-rumble", "ARENA BRAWLER", "Spinner combat game"), ("blade-tilt", "PHYSICS ACTION", "Tilt-and-slice blade game"),
         ("neon-fps", "FPS", "Neon-lit shooter in the browser"), ("Battle-Royale-Core", "MULTIPLAYER", "Battle royale core systems"),
-        ("neon-deceit-game", "SOCIAL DEDUCTION", "Neon deception game"), ("Namaste_tv_stripe", "PAYMENTS", "Stripe integration"),
         ("SIH26151-Threat-Intelligence-1", "CYBERSEC", "SIH threat-intel platform"), ("synth-eight", "WEB", "Synth-eight project")]
 info = {r["name"]: r for r in repos}
 for i, (n, tag, d) in enumerate(proj):
