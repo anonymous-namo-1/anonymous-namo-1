@@ -8,14 +8,26 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 def gh(*a): return json.loads(subprocess.check_output(["gh", *a]))
 
-def image_to_ascii(path, cols=38, rows=24):
-    from PIL import Image, ImageOps
-    ramp = " .'`^,:;Il!i><~+_-?][}{1)(|tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
-    im = ImageOps.autocontrast(Image.open(path).convert("L")).resize((cols, rows))
-    return "\n".join("".join(ramp[(255 - im.getpixel((x, y))) * (len(ramp) - 1) // 255] for x in range(cols)) for y in range(rows))
+def image_to_ascii(path, cols=38, rows=24, invert=False):
+    """Photo (ideally background-removed RGBA head crop) -> ASCII. Bright = dense unless invert."""
+    from PIL import Image, ImageOps, ImageEnhance
+    ramp = " .,:;-~=+*o#%&@"
+    im = Image.open(path).convert("RGBA"); alpha = im.split()[3].resize((cols, rows))
+    g = ImageEnhance.Contrast(ImageOps.equalize(im.convert("L"))).enhance(1.2).resize((cols, rows), Image.LANCZOS)
+    out = []
+    for y in range(rows):
+        row = ""
+        for x in range(cols):
+            if alpha.getpixel((x, y)) < 90: row += " "; continue
+            p = g.getpixel((x, y)); p = 255 - p if invert else p
+            row += ramp[max(1, p * (len(ramp) - 1) // 255)]
+        out.append(row)
+    return "\n".join(out)
 
 if "--ascii-from" in sys.argv:
-    open(os.path.join(HERE, "ascii.txt"), "w").write(image_to_ascii(sys.argv[sys.argv.index("--ascii-from") + 1]))
+    src = sys.argv[sys.argv.index("--ascii-from") + 1]
+    open(os.path.join(HERE, "ascii.txt"), "w").write(image_to_ascii(src))                    # dark theme: bright = dense
+    open(os.path.join(HERE, "ascii_light.txt"), "w").write(image_to_ascii(src, invert=True))  # light theme: dark ink = dense
 
 # ---- data
 user = gh("api", f"users/{U}")
@@ -85,8 +97,11 @@ lines = [
     multi(430, [("Commits", f(stats["commits"])), ("Followers", f(stats["followers"]))]),
     f'<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc"> {"."*max(1, W-34-len(f(stats["loc"]))-len(f(stats["add"]))-len(f(stats["dele"])))} </tspan><tspan class="value">{f(stats["loc"])}</tspan> ( <tspan class="addColor">{f(stats["add"])}++</tspan>, <tspan class="delColor">{f(stats["dele"])}--</tspan> )',
 ]
-ascii_art = open(os.path.join(HERE, "ascii.txt")).read().rstrip("\n").split("\n")
-art = "".join(f'<tspan x="15" y="{30+i*20}">{html.escape(l)}</tspan>\n' for i, l in enumerate(ascii_art[:24]))
+def load_art(fn):
+    p = os.path.join(HERE, fn)
+    if not os.path.exists(p): p = os.path.join(HERE, "ascii.txt")
+    return "".join(f'<tspan x="15" y="{40+i*19}">{html.escape(l)}</tspan>\n' for i, l in enumerate(open(p).read().rstrip("\n").split("\n")[:24]))
+ARTS = {"dark": load_art("ascii.txt"), "light": load_art("ascii_light.txt")}
 TH = {"dark": dict(bg="#161b22", fg="#c9d1d9", key="#ffa657", val="#a5d6ff", add="#3fb950", dele="#f85149", cc="#616e7f"),
       "light": dict(bg="#f6f8fa", fg="#24292f", key="#953800", val="#0a3069", add="#1a7f37", dele="#cf222e", cc="#c2cfde")}
 for name, c in TH.items():
@@ -96,7 +111,7 @@ for name, c in TH.items():
 .key{{fill:{c["key"]}}} .value{{fill:{c["val"]}}} .addColor{{fill:{c["add"]}}} .delColor{{fill:{c["dele"]}}} .cc{{fill:{c["cc"]}}} text,tspan{{white-space:pre}}</style>
 <rect width="985px" height="500px" fill="{c["bg"]}" rx="15"/>
 <text x="15" y="30" fill="{c["fg"]}" class="ascii">
-{art}</text>
+{ARTS[name]}</text>
 <text x="390" y="30" fill="{c["fg"]}">
 {chr(10).join(lines)}
 </text>
