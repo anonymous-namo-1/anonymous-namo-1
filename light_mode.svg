@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,'Courier New',monospace" width="985px" height="500px" font-size="16px">
+<style>@font-face{src:local('Consolas'),local('Consolas Bold');font-family:'ConsolasFallback';font-display:swap;size-adjust:109%;}
+.key{fill:#953800} .value{fill:#0a3069} .addColor{fill:#1a7f37} .delColor{fill:#cf222e} .cc{fill:#c2cfde} text,tspan{white-space:pre}</style>
+<rect width="985px" height="500px" fill="#f6f8fa" rx="15"/>
+<text x="15" y="30" fill="#24292f" class="ascii">
+<tspan x="15" y="30"></tspan>
+<tspan x="15" y="50">         .:-=+*###########*+=-:.</tspan>
+<tspan x="15" y="70">      .-+#%@@@@@@@@@@@@@@@@@@%#+-.</tspan>
+<tspan x="15" y="90">    .+%@@%*=-:.          .:-=*%@@%+.</tspan>
+<tspan x="15" y="110">   =%@@*-.     PORTRAIT       .-*@@%=</tspan>
+<tspan x="15" y="130">  *@@#:      PLACEHOLDER        :#@@*</tspan>
+<tspan x="15" y="150"> +@@+    ___________________     +@@+</tspan>
+<tspan x="15" y="170">:@@#    |                   |     #@@:</tspan>
+<tspan x="15" y="190">+@@-    |   ascii photo of  |     -@@+</tspan>
+<tspan x="15" y="210">*@@:    |   jatin verma     |     :@@*</tspan>
+<tspan x="15" y="230">+@@-    |   coming soon...  |     -@@+</tspan>
+<tspan x="15" y="250">:@@#    |___________________|     #@@:</tspan>
+<tspan x="15" y="270"> +@@+                            +@@+</tspan>
+<tspan x="15" y="290">  *@@#:     $ neofetch         :#@@*</tspan>
+<tspan x="15" y="310">   =%@@*-.                  .-*@@%=</tspan>
+<tspan x="15" y="330">    .+%@@%*=-:.        .:-=*%@@%+.</tspan>
+<tspan x="15" y="350">      .-+#%@@@@@@@@@@@@@@@@@%#+-.</tspan>
+<tspan x="15" y="370">         .:-=+*##########*+=-:.</tspan>
+<tspan x="15" y="390"></tspan>
+<tspan x="15" y="410">       [ jatin@verma ~ ]$ _</tspan>
+</text>
+<text x="390" y="30" fill="#24292f">
+<tspan x="390" y="30">jatin@verma</tspan> -———————————————————————————————————————-—-
+<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............... </tspan><tspan class="value">Linux Mint, Windows 11, Android</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">1 year, 6 months, 21 days</tspan>
+<tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">Thapar Institute of Engineering</tspan>
+<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ...................... </tspan><tspan class="value">Full-Stack Developer</tspan>
+<tspan x="390" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">VSCode, Unity, Cursor</tspan>
+<tspan x="390" y="150" class="cc">. </tspan>
+<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> . </tspan><tspan class="value">TypeScript, C#, JS, Python</tspan>
+<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Computer</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">HTML, CSS, JSON, SQL</tspan>
+<tspan x="390" y="210" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> .................... </tspan><tspan class="value">Hindi, English</tspan>
+<tspan x="390" y="230" class="cc">. </tspan>
+<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Software</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">Game Dev, Web Templates</tspan>
+<tspan x="390" y="270" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Hardware</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">Gesture Control, Tinkering</tspan>
+<tspan x="390" y="290" class="cc">. </tspan>
+<tspan x="390" y="310" class="cc">. </tspan><tspan class="key">Projects</tspan>.<tspan class="key">Games</tspan>:<tspan class="cc"> . </tspan><tspan class="value">spin-rumble, neon-fps, blade-tilt</tspan>
+<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Projects</tspan>.<tspan class="key">Web</tspan>:<tspan class="cc"> .... </tspan><tspan class="value">PresentProof, Battle-Royale-Core</tspan>
+<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Projects</tspan>.<tspan class="key">Security</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">SIH Threat-Intelligence</tspan>
+<tspan x="390" y="390">- GitHub Stats</tspan> -————————————————————————————————————-—-
+<tspan x="390" y="410" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">27</tspan> | <tspan class="key">Contributed</tspan>: <tspan class="value">1</tspan> | <tspan class="key">Stars</tspan>: <tspan class="value">0</tspan>
+<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">827</tspan> | <tspan class="key">Followers</tspan>: <tspan class="value">0</tspan>
+<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc"> . </tspan><tspan class="value">226,827</tspan> ( <tspan class="addColor">270,924++</tspan>, <tspan class="delColor">44,097--</tspan> )
+</text>
+</svg>
