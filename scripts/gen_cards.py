@@ -8,9 +8,22 @@ def gh(*a): return json.loads(subprocess.check_output(["gh", *a]))
 repos = gh("repo", "list", U, "--limit", "200", "--json", "name,description,primaryLanguage,stargazerCount,forkCount,isPrivate,updatedAt,diskUsage")
 langs = collections.Counter()
 for r in repos:
-    try: langs.update(gh("api", f"repos/{U}/{r['name']}/languages"))
-    except Exception: pass
-def w(name, s): open(os.path.join(OUT, name), "w").write(s)
+    try: l = gh("api", f"repos/{U}/{r['name']}/languages")
+    except Exception: continue
+    # repos with huge C/C++ blobs are vendored engines/SDKs, not hand-written code
+    if l.get("C", 0) + l.get("C++", 0) > 20_000_000:
+        l.pop("C", None); l.pop("C++", None)
+    langs.update(l)
+PAPER, INK, AMBER = "#f5f0e1", "#14532d", "#a16207"
+def light(s):
+    """Light 'field notebook' variant: paper bg, deep-green ink, amber secondary, crisp (low) glow."""
+    return (s.replace("#020a04", PAPER).replace("#000", PAPER).replace(G, INK).replace("#0a8f2a", AMBER)
+             .replace('stdDeviation="2"', 'stdDeviation=".4"').replace('stdDeviation="3"', 'stdDeviation=".6"')
+             .replace('opacity=".55"', 'opacity=".28"').replace('opacity=".35"', 'opacity=".5"')
+             .replace("<rect width=", '<rect fill-opacity="1" width=', 1))
+def w(name, s):
+    open(os.path.join(OUT, name), "w").write(s)
+    open(os.path.join(OUT, name.replace(".svg", "-light.svg")), "w").write(light(s))
 FX = f'''<defs><filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".35"/></pattern>
 <radialGradient id="vig" cx="50%" cy="50%" r="75%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity=".7"/></radialGradient></defs>
